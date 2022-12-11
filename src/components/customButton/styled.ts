@@ -2,12 +2,14 @@ import styled from 'styled-components/native'
 
 export const Container = styled.TouchableOpacity.attrs(() => {
 })`
-  height: 60px;
+  width: ${props => props?.width ? props?.width : '90%'};
+  height: ${props => props?.height ? props?.height : '60px'};
   background-color: ${props => props?.color ? props?.color : "#268596"};
   border-radius: ${props => props?.borderRadius ? props?.borderRadius : "30px"};
-  padding-left: 15px;
+  justify-content: center;
   align-items: center;
   margin-bottom: 15px;
+  text-align: center;
 `;
 
 export const CustomButtomText = styled.Text.attrs(() => {

@@ -10,7 +10,26 @@ export const Container = styled.KeyboardAvoidingView`
 `;
 
 export const InputArera = styled.View`
+  width: 90%;
   margin: 40px 0;
   align-items: center;
   justify-content: center;
 `
+
+export const SignAreaText = styled.View`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+`;
+
+export const SignText = styled.Text`
+  font-size: 16px;
+  color: #268596;
+`;
+
+
+export const SignTextBold = styled.Text`
+  font-size: 16px;
+  color: #268596;
+  font-weight: bold;
+`;

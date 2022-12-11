@@ -8,20 +8,22 @@ import { StackNavigationProp } from "@react-navigation/stack";
 import { RootStackParamList } from "../../../types";
 
 export default function Preload() {
-  const { navigate } = useNavigation<StackNavigationProp<RootStackParamList>>();
+  const navigation = useNavigation<StackNavigationProp<RootStackParamList>>();
     useEffect(() => {
     const checkToken = async () => {
       const token = await AsyncStorage.getItem('auth_token')
         if(token) {
           //validar token
         } else {
-          navigate('SignIn')
+          navigation.reset({
+            routes:[{name:'SignIn'}]
+        });
         }
       }
 
-      setInterval(() => {
+      setTimeout(() => {
         checkToken()
-      }, 3000)
+      }, 1000)
     }
   )
   return (

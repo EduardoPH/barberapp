@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components/native';
 
-export const Container = styled.View`
+export const Container = styled.Pressable`
   width: 90%;
   height: 60px;
   background-color: #83D6E3;
